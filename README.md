@@ -1,6 +1,6 @@
 # Bluefin Mobile App
 
-Expo/React Native application for the Bluefin customer mobile experience.
+Bluefin mobile app built with Expo and React Native: catalog, cart, checkout, profile, and push notifications. Integrates with API, OneSignal, AppsFlyer, OSMI, and AikoCard.
 
 ## Stack
 
