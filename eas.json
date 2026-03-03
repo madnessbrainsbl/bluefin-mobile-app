@@ -1,0 +1,54 @@
+{
+  "cli": {
+    "version": ">= 12.6.1",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://example.com/v4",
+        "EXPO_PUBLIC_ONESIGNAL_APP_ID": "set-in-eas-secrets",
+        "EXPO_PUBLIC_APPSFLYER_DEV_KEY": "set-in-eas-secrets",
+        "EXPO_PUBLIC_APPSFLYER_IOS_APP_ID": "set-in-eas-secrets",
+        "EXPO_PUBLIC_APPSFLYER_ANDROID_APP_ID": "set-in-eas-secrets",
+        "EXPO_PUBLIC_OSMI_API_URL": "https://example-osmi.com/api/v3",
+        "EXPO_PUBLIC_OSMI_API_KEY": "set-in-eas-secrets",
+        "EXPO_PUBLIC_OSMI_OAUTH_KEY": "set-in-eas-secrets",
+        "EXPO_PUBLIC_AIKO_API_KEY": "set-in-eas-secrets"
+      },
+      "channel": "development"
+    },
+    "preview": {
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://example.com/v4",
+        "EXPO_PUBLIC_ONESIGNAL_APP_ID": "set-in-eas-secrets",
+        "EXPO_PUBLIC_APPSFLYER_DEV_KEY": "set-in-eas-secrets",
+        "EXPO_PUBLIC_APPSFLYER_IOS_APP_ID": "set-in-eas-secrets",
+        "EXPO_PUBLIC_APPSFLYER_ANDROID_APP_ID": "set-in-eas-secrets",
+        "EXPO_PUBLIC_OSMI_API_URL": "https://example-osmi.com/api/v3",
+        "EXPO_PUBLIC_OSMI_API_KEY": "set-in-eas-secrets",
+        "EXPO_PUBLIC_OSMI_OAUTH_KEY": "set-in-eas-secrets",
+        "EXPO_PUBLIC_AIKO_API_KEY": "set-in-eas-secrets"
+      },
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease"
+      },
+      "channel": "preview"
+    },
+    "production": {
+      "autoIncrement": true,
+      "channel": "production",
+      "environment": "production",
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://apiv4.bluefin.moscow/v4"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

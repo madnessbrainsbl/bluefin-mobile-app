@@ -1,0 +1,17 @@
+diff --git a/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt b/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt
+index 3dd30cc..6dac7cc 100644
+--- a/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt
++++ b/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt
+@@ -115,8 +115,10 @@ class ReactActivityDelegateWrapper(
+         reactActivityLifecycleListeners.forEach { listener ->
+           listener.onContentChanged(activity)
+         }
+-        shouldEmitPendingResume = false
+-        onResume()
++        if (shouldEmitPendingResume) {
++          shouldEmitPendingResume = false
++          onResume()
++        }
+       }
+       return
+     }

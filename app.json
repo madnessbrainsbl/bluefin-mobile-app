@@ -1,0 +1,139 @@
+{
+  "expo": {
+    "name": "Bluefin Moscow",
+    "slug": "bluefin",
+    "version": "1.2.36",
+    "orientation": "portrait",
+    "icon": "./assets/images/adaptive.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "jsEngine": "hermes",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSLocationAlwaysUsageDescription": "The app gets the user's current location to determine the delivery address.",
+        "NSLocationWhenInUseUsageDescription": "The app gets the user's current location to determine the delivery address.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "The app gets the user's current location to determine the delivery address.",
+        "UIBackgroundModes": [
+          "remote-notification"
+        ]
+      },
+      "entitlements": {
+        "aps-environment": "development",
+        "com.apple.security.application-groups": [
+          "group.${ios.bundleIdentifier}.onesignal"
+        ]
+      }
+    },
+    "android": {
+      "versionCode": 12913,
+      "config": {
+        "googleMaps": {
+          "apiKey": "YOUR_GOOGLE_MAPS_ANDROID_API_KEY"
+        }
+      },
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "ru.sionic.bluefin"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-localization",
+      "expo-secure-store",
+      "expo-font",
+      "expo-web-browser",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "buildToolsVersion": "35.0.0",
+            "newArchEnabled": true
+          },
+          "ios": {
+            "deploymentTarget": "15.1",
+            "newArchEnabled": true
+          }
+        }
+      ],
+      "./plugins/withAndroidManifestFix",
+      [
+        "expo-tracking-transparency",
+        {
+          "userTrackingPermission": "We collect data to track app performance and analyze order statistics to improve user experience."
+        }
+      ],
+      [
+        "onesignal-expo-plugin",
+        {
+          "mode": "production"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "build": {
+          "experimental": {
+            "ios": {
+              "appExtensions": [
+                {
+                  "targetName": "OneSignalNotificationServiceExtension",
+                  "bundleIdentifier": "ru.sionic.bluefinmoscow.OneSignalNotificationServiceExtension",
+                  "entitlements": {
+                    "com.apple.security.application-groups": [
+                      "group.ru.sionic.bluefinmoscow.onesignal"
+                    ]
+                  }
+                },
+                {
+                  "targetName": "OneSignalNotificationServiceExtension",
+                  "bundleIdentifier": "ru.sionic.bluefinmoscow.OneSignalNotificationServiceExtension",
+                  "entitlements": {
+                    "com.apple.security.application-groups": [
+                      "group.ru.sionic.bluefinmoscow.onesignal"
+                    ]
+                  }
+                },
+                {
+                  "targetName": "OneSignalNotificationServiceExtension",
+                  "bundleIdentifier": "ru.sionic.bluefinmoscow.OneSignalNotificationServiceExtension",
+                  "entitlements": {
+                    "com.apple.security.application-groups": [
+                      "group.ru.sionic.bluefinmoscow.onesignal"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "projectId": "2401bd5c-9245-4516-9fbe-6738e5de93c4"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/"
+    },
+    "owner": "fukd"
+  }
+}

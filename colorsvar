@@ -1,0 +1,45 @@
+Черный #181818 / RGB 24, 24, 24
+Желтый #FFD04A / RGB 255, 208, 74
+Белый #FFFFFF / RGB 255, 255, 255
+Красный #D63E3E / RGB 214, 62, 62
+
+background #181818 / RGB 24, 24, 24
+background-light #181818 / RGB 24, 24, 24
+background-control #FFFFFF / RGB 255, 255, 255
+background-message  #181818 / RGB 24, 24, 24
+background-error  #D63E3E / RGB 214, 62, 62  (серная с красным контуром)
+background-dark #181818 / RGB 24, 24, 24
+
+primary #FFFFFF / RGB 255, 255, 255
+primary-light #FFD04A / RGB 255, 208, 74
+primary-pale - #FFD04A / RGB 255, 208, 74 (цвет шрифта при нажатии меняется на белый)
+
+border - (черная плашка с белым контуром)
+border-light #FFD04A / RGB255, 208, 74
+
+selected  - нету (цвет шрифта при нажатии меняется на белый, плашка за текстом отсутствует)
+text   #FFD04A / RGB 255, 208, 74
+text-light #FFD04A / RGB 255, 208, 74
+text-dark   #FFFFFF / RGB 255, 255, 255
+text-control   #18.18.18 / RGB 24, 24, 24
+text-error   #D63E3E / RGB 214, 62, 62
+form-text-control   #FFD04A / RGB 255, 208, 74
+
+background: #FFFFFF',
+backgroundLight: # rgb(var(--color-background-200)/<alpha-value>)',
+backgroundDark: #393B41',
+backgroundControl: #F3F3F7',
+backgroundMessage: #ECF1F5',
+backgroundError: #F4EAEA',
+primary: #A77027',
+light: #CA9C6C',
+pale: #63615D',
+selected: #F6F8FA',
+border: #CDCDCD',
+borderLight: #D6D6D6',
+textGray: #393B41',
+textLight: #7B848C',
+textDark: #8A8A8A',
+textControl: #504E4E',
+textError: #D63E3E',
+formTextControl: #93AED3',
